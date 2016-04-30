@@ -5,6 +5,7 @@
 
 #include "constants.hpp"
 #include "timer.hpp"
+#include "point.hpp"
 #include "frame.hpp"
 
 class Fighter
@@ -32,8 +33,8 @@ public:
     
     
 private:
-    int x, y;               //x and y position
-    int direction;          //direction from 0-5, starting at southwest, proceeding counterclockwise
+    Point pos;              //position
+    int dir;          //direction from 0-5, starting at southwest, proceeding counterclockwise
     
     int currentFrame;       //which frame of the current animation is showing?
     int currentMove;        //if we're executing a move: which one?
@@ -41,7 +42,7 @@ private:
     float next;             //counts until next frame
     
     //frames: contain animation and hit/punish/stand box information
-    Frame frame;           //pointer to current frame
+    Frame frame;            //pointer to current frame
     Frame stand[6];         //standing
     //Frame run[6];         //running
     //Move move[??];        //jumping, rolling, attacking

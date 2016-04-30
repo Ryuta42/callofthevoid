@@ -65,7 +65,13 @@ void Window::draw(Frame* frame)
     //scale to pixel ratio
     pos = rect_mult(pos, PIXEL_RATIO);
     
-    SDL_RenderCopy(renderer, texture.at(frame->getSheet()), &crop, &pos);
+    //if we have the correct sheet loaded, we draw the sprite
+    int sheet = frame->getSheet();
+    for (int i = 0; i < texture.size(); i++)
+    {
+        if (texture_id.at(i) == sheet)
+            SDL_RenderCopy(renderer, texture.at(i), &crop, &pos);
+    }
     
     //for debug: show hit/punish boxes
     if (SHOW_BOXES)
@@ -113,11 +119,11 @@ void Window::render()
 
 bool Window::getLoadSuccess() { return loadSuccess; }
 
-void Window::addTexture(string path, int sheet_id)
+void Window::addTexture(string path, int id)
 {
     SDL_Texture* temp;
     texture.push_back(temp);
-    texture_name.push_back(sheet_id);
+    texture_id.push_back(id);
     texture.back() = IMG_LoadTexture(renderer, path.c_str());
     if (texture.back() == NULL)
     {

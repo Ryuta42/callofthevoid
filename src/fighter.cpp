@@ -6,9 +6,7 @@
 Fighter::Fighter()
 {
     //initalize variables
-    x = 0;
-    y = 0;
-    direction = 0;
+    dir = 0;
     currentFrame = 0;
     currentMove = MOVE_NONE;
     frameRate = 0;
@@ -39,13 +37,12 @@ void Fighter::update(Timer* timer)
 
 Frame* Fighter::getFrame()
 {
-    //calculate direction
-    
+    //calculate direction if necessary
     
     //standing
     if (currentMove == MOVE_NONE)
     {
-        updateFrameWithPosition(&stand[direction]);
+        updateFrameWithPosition(&stand[dir]);
     }
     
     return &frame;
@@ -53,14 +50,14 @@ Frame* Fighter::getFrame()
 
 void Fighter::setPos(int a, int b)
 {
-    x = a;
-    y = b;
+    pos.setX(a);
+    pos.setY(b);
 }
 
 void Fighter::updateFrameWithPosition(Frame* f)
 {
     frame = *f;
-    frame.setPos(x + f->getX(), y + f->getY());
+    frame.setPos(pos.getX() + f->getX(), pos.getY() + f->getY());
 }
 
 void Fighter::accelerate(float x, float y)

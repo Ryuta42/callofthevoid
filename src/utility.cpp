@@ -18,8 +18,3 @@ SDL_Rect rect_mult(SDL_Rect r, int ratio)
     r.h = r.h * ratio;
     return r;
 }
-
-double angle(int x, int y)
-{
-    return atan(y/x);
-}

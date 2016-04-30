@@ -3,7 +3,7 @@
     By Gabriel Branton, Miles Chew, Joeseph McLaughlin
     
     Build on OS X:
-    g++ src/main.cpp src/utility.cpp src/timer.cpp src/eventhandler.cpp src/rectlist.cpp src/frame.cpp src/fighter.cpp src/window.cpp src/gamestate.cpp src/titlescreen.cpp -o "CotV" -framework SDL2 -framework SDL2_image -framework SDL2_ttf
+    g++ src/main.cpp src/utility.cpp src/point.cpp src/timer.cpp src/eventhandler.cpp src/rectlist.cpp src/frame.cpp src/fighter.cpp src/window.cpp src/gamestate.cpp src/titlescreen.cpp -o "CotV" -framework SDL2 -framework SDL2_image -framework SDL2_ttf
 */
 
 ////////////////////////////////////////
@@ -19,6 +19,7 @@
 
 #include "header/constants.hpp"
 #include "header/utility.hpp"
+#include "header/point.hpp"
 #include "header/timer.hpp"
 #include "header/eventhandler.hpp"
 #include "header/rectlist.hpp"

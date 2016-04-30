@@ -36,14 +36,14 @@ public:
     bool getLoadSuccess();
     
     //setters
-    void addTexture(string path, int sheet_id);
+    void addTexture(string path, int id);
 
 private:
     //SDL objects
     SDL_Window* window;
     SDL_Renderer* renderer;
     vector < SDL_Texture* > texture;
-    vector < int > texture_name;
+    vector < int > texture_id;
     TTF_Font* font;
     
     //for drawing frames
