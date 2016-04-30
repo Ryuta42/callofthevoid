@@ -35,7 +35,7 @@ void Fighter::update(Timer* timer)
 Frame* Fighter::getFrame()
 {
     //calculate direction
-    //TODO wider angle range for west and east
+    
     
     //standing
     if (currentMove == MOVE_NONE)
