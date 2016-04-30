@@ -62,7 +62,7 @@ void Window::draw(Frame* frame)
     crop = frame->getCrop();
     pos = frame->getPos();
     
-    //scale to pixel ration
+    //scale to pixel ratio
     pos = rect_mult(pos, PIXEL_RATIO);
     
     SDL_RenderCopy(renderer, texture.at(frame->getSheet()), &crop, &pos);

@@ -17,7 +17,7 @@ class Frame
 public:
     //constructors and destructors
     Frame(){};
-    Frame(int delayTime, int pos_width, int pos_height,
+    Frame(int delayTime, int pos_x, int pos_y, int pos_width, int pos_height,
         int crop_x, int crop_y, int crop_width, int crop_height, int sheet_id);
     
     //getters

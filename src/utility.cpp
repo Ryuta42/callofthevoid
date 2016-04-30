@@ -1,5 +1,6 @@
 //utility.cpp
 
+#include <tgmath.h>
 #include "header/utility.hpp"
 
 SDL_Rect rect(int x, int y, int h, int w)
@@ -16,4 +17,9 @@ SDL_Rect rect_mult(SDL_Rect r, int ratio)
     r.w = r.w * ratio;
     r.h = r.h * ratio;
     return r;
+}
+
+double angle(int x, int y)
+{
+    return atan(y/x);
 }

@@ -23,7 +23,7 @@ enum { SHEET_KNIGHT };
 //moves
 enum { MOVE_NONE };
 
-//directions (clockwise from northeast)
-enum { NORTHEAST, EAST, SOUTHEAST, SOUTHWEST, WEST, NORTHWEST };
+//directions (counterclockwise from southwest, matching the sprite sheet layout)
+enum { SOUTHWEST, SOUTHEAST, EAST, NORTHEAST, NORTHWEST, WEST };
 
 #endif

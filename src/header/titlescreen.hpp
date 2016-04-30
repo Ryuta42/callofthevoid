@@ -23,6 +23,7 @@ public:
     //getters
     
 private:
+    Timer timer;
     EventHandler eventhandler;
     
     Fighter fighter; //TODO dumb

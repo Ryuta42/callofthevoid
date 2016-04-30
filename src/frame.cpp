@@ -2,11 +2,11 @@
 
 #include "header/frame.hpp"
 
-Frame::Frame(int delayTime, int pos_width, int pos_height,
+Frame::Frame(int delayTime, int pos_x, int pos_y, int pos_width, int pos_height,
         int crop_x, int crop_y, int crop_width, int crop_height, int sheet_id)
 {
-    pos.x = 50;
-    pos.y = 50;
+    pos.x = pos_x;
+    pos.y = pos_y;
     delay = delayTime;
     pos.w = pos_width;
     pos.h = pos_height;

@@ -11,4 +11,7 @@ SDL_Rect rect(int x, int y, int h, int w);
 SDL_Rect rect_mult(SDL_Rect r, int ratio);
 //multiply an SDL rectangle's dimensions by a value
 
+double angle(int x, int y);
+//gives the angle of a vector given x and y coordinates
+
 #endif
